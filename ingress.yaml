@@ -1,18 +1,19 @@
-apiVersion: apps/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: gateway-ingress
+  name: nginx-default-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
-  backend:
-    serviceName: default-http-backend
-    servicePort: 80
   rules:
-  - host: localhost
+  - host: microservice.test
     http:
       paths:
-      - path: /user-service/
+      - path: /user(/|$)(.*)
+        pathType: Prefix
         backend:
-          serviceName: user-service
-          servicePort: 8080
+          service: 
+            name: user-service
+            port:
+              number: 8080

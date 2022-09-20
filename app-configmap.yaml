@@ -1,7 +1,9 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: app
 data:
   APP_PROFILE: prod
   USER_DATABASE_NAME: user-db
+  DATABASE_URL: database-service
+  DATABASE_PORT: "3306"

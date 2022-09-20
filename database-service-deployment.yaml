@@ -15,23 +15,23 @@ spec:
         app: database-service
     spec:
       containers:
-        -name: database-service
-          image: mysql:latest
-          ports:
-            -containerPort: 3306
-          env:
-            -name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: mysqldb
-                key: DATABASE_PASSWORD
-          volumeMounts:
-            - name: mysql-volume
-              mountPath: /var/lib/mysql
-      volumes:
+      - name: database-service
+        image: mysql:latest
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysqldb
+              key: DATABASE_PASSWORD
+        volumeMounts:
         - name: mysql-volume
-          persistentVolumeClaim:
-            claimName: mysql-pv-claim
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-volume
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
               
 ---
 apiVersion: v1
@@ -42,7 +42,7 @@ metadata:
     app: database-service
 spec:
   ports:
-    - port: 3306
-      protocol: TCP
+  - port: 3306
+    protocol: TCP
   selector:
     app: database-service
