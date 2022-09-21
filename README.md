@@ -1,5 +1,6 @@
 `minikube start --driver=docker`
 `minikube addons enable ingress`
+
 `kubectl apply -f privileges.yaml`
 `kubectl apply -f ingress.yaml`
 
