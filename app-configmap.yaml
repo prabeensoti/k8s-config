@@ -7,12 +7,13 @@ data:
   DATABASE_URL: database-service
   DATABASE_PORT: "3306"
   USER_DATABASE_NAME: user-db
-  USER_SERVICE_URL: user-service
+  USER_SERVICE_URL: user-service:8080
   PRODUCT_DATABASE_NAME: product-db
   ORDER_DATABASE_NAME: order-db
-  PAYMENT_SERVICE_URL: payment-service
+  PAYMENT_SERVICE_URL: payment-service:8080
   PAYMENT_DATABASE_NAME: payment-db
-  BANK_TRANSACTION_URL: bank-payment-service
-  CC_TRANSACTION_URL: cc-payment-service
-  PAYPAL_TRANSACTION_URL: paypal-payment-service
+  BANK_TRANSACTION_URL: bank-payment-service:8080
+  CC_TRANSACTION_URL: cc-payment-service:8080
+  PAYPAL_TRANSACTION_URL: paypal-payment-service:8080
   NOTIFICATION_DATABASE_NAME: notification-db
+  NOTIFICATION_SERVICE_URL: notification-service:8080
