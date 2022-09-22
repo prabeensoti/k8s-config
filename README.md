@@ -8,7 +8,7 @@
 
 ## Use following commands for basic configuration 
 
-## User `minikube kubectl --` if `kubectl` not working or not found
+## Use `minikube kubectl --` if `kubectl` not working or not found
 
 `kubectl apply -f privileges.yaml`
 
