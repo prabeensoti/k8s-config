@@ -1,3 +1,8 @@
+# Project Members
+    1. Prabeen Soti
+    2. Saroj K Dev
+    3. Abenezer Genanaw Alemu
+
 # Delete minikube
 `minikube delete`
 # Start minikube on docker
