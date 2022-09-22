@@ -21,6 +21,8 @@
 `kubectl apply -f mysql-persistence-volume-clame.yaml`
 `kubectl apply -f database-service-deployment.yaml`
 
+## Check services README.md for runnig other services
+
 ## In product service api we need ADMIN role to add data
 
 ## `sudo nano /etc/hosts` to edit domain proxy
