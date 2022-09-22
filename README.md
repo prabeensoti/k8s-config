@@ -16,14 +16,19 @@
 ## Use `minikube kubectl --` if `kubectl` not working or not found
 
 `kubectl apply -f privileges.yaml`
-
+###
 `kubectl apply -f ingress.yaml`
-
+###
 `kubectl apply -f app-configmap.yaml`
+###
 `kubectl apply -f app-secret.yaml`
+###
 `kubectl apply -f mysql-secret.yaml`
+###
 `kubectl apply -f mysql-persistence-volume.yaml`
+###
 `kubectl apply -f mysql-persistence-volume-clame.yaml`
+###
 `kubectl apply -f database-service-deployment.yaml`
 
 ## Check services README.md for runnig other services
